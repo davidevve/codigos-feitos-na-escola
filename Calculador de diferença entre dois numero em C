@@ -1,0 +1,28 @@
+#include<stdio.h> //biblioteca de comandos basicos
+#include<locale> //biblioteca de localização
+
+int main(){ //conado principal do codigo
+	
+	setlocale(LC_ALL,"portuguese"); //setar o local para lingua portuguesa
+	
+	int n1,n2,dif; //variavel inteiro
+	
+	printf("coloque o seu primeiro numero"); //variavel de saida
+ 	scanf("%i",&n1); //variavel de entrda
+	
+	printf("coloque o seu segundo numero"); //comando de saida
+	scanf("%i",&n2); //comando de entrada
+	
+	if(n1>n2){ // comando que representa o se
+		dif = n1-n2;
+		printf("a diferença é de %i ",dif);// variavel de saida 
+	}
+	else // comando que representa o senão 
+	if(n1<n2){ //comando que representa o se
+		dif = n2-n1;
+		printf("\n\na diferença é de %i ",dif); // variavel de saida
+	}
+	
+	
+	/* as variaveis de entrada é o n1,n2 representa os numero de entrada  e a variavel de saida é a dif que representa a diferença*/
+	
