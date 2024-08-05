@@ -1,0 +1,25 @@
+#include<stdio.h> //bibliotec de comando basicos
+#include<locale.h> //biblioteca de localização
+
+main() //função base
+{
+setlocale(LC_ALL,"PORTUGUESE"); //comando para setar o local
+int q_broas,q_paes; // comando para declarar a variavel inteiro
+float vr_broas,vr_paes,poupanca,total_vendas; //comando para criar a variavel real
+
+vr_paes = 1.15; //colocando o valor nos paes
+vr_broas = 1.50;//colocando valor nas broas
+
+printf("\n \n Quantidade de pães: ");//comando de saida/escreva
+scanf("%i",&q_paes);//comado de entrada/leia
+
+printf("\nquantas broas você quer ? ");//comando de saida/escreva
+	scanf("%i",&q_broas);//comado de entrada/leia
+
+total_vendas = (vr_paes*q_paes) + (vr_broas*q_broas);//calculos para descobrir o total de vendas
+    poupanca = total_vendas - (100/10);//calculo para descobrir o valor da poupança
+    
+
+printf("Total de venda =  %.2f  ",total_vendas);//comando de saida/escreva
+printf("valor da poupança = %.2f ",poupanca);//comando de saida/escreva
+}
