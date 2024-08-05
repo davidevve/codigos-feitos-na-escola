@@ -1,0 +1,18 @@
+#include<stdio.h> //biblioteca de comandos basicos
+#include<locale> //biblioteca de localização
+
+main(){ //conado principal do codigo
+	
+	setlocale(LC_ALL,"portuguese"); //setar o local para lingua portuguesa
+	float c,f; //variavel de real
+	
+	printf("coloque quantos graus está ");//comando de saida
+	scanf("%f",&c);//comando de entrda
+	
+	f=(9*c+160) /5; //calculo
+
+printf("\n\no resultado a conversão é %.2f ",f); //comando de saida
+
+/* as variaveis de entrada é o c que representa os graus Celsius e a de saida e o f que representa os Fahrenheit */
+}
+
