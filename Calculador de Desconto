@@ -1,0 +1,22 @@
+#include<stdio.h> //biblioteca de comandos basicos
+#include<locale> //biblioteca de localização
+
+main(){ //conado principal do codigo
+	
+	setlocale(LC_ALL,"portuguese"); //setar o local para lingua portuguesa
+	
+	float prec,precf,des,vlrcd; //variavel de real
+	
+	printf("coloque o valor do seu primeiro produto R$ "); //comando de saida
+	scanf("%f",&prec);//comando de entrda
+	
+	des = prec - (prec * 9/100);//calculo
+	
+	precf = prec - des;//calculo
+	
+	vlrcd = prec - precf;//calculo
+	
+	printf("\no valor com o desconto é R$ %.2f",vlrcd);//comando de saida
+	
+}
+	/* as variaveis de entrada é o prec representa o preço e a variavel de saida é vlrcd que representa o valor com desconto*/ 
