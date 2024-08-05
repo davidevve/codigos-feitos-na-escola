@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<locale>
+main()
+{
+setlocale(LC_ALL,"Portuguese");
+float x,z;
+printf("\n\n\t\t\t triplo ou dobro");
+printf("\n\n\n");
+printf("digite qualquer numero ");
+scanf("%f",&x);
+
+if(x>0)
+{
+z=(x*2);
+printf("o drobor é %.2f",z);
+}
+else
+{
+z=(x*3);
+printf(" o triplo é%.2f",z)
