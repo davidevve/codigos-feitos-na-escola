@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include<locale.h>
+int main() {
+    int id,conceito;
+    float nota1, nota2, nota3, ME, MA;
+    
+    setlocale(LC_ALL,"portuguese");
+    
+    // Leitura dos dados
+    printf("Digite o número de identificação do aluno: ");
+    scanf("%d", &id);
+    
+    printf("Digite a nota 1: ");
+    scanf("%f", &nota1);
+    
+    printf("Digite a nota 2: ");
+    scanf("%f", &nota2);
+    
+    printf("Digite a nota 3: ");
+    scanf("%f", &nota3);
+    
+    printf("Digite a média dos exercícios: ");
+    scanf("%f", &ME);
+    
+    // Cálculo da média de aproveitamento
+    MA = (nota1 + nota2 * 2 + nota3 * 3 + ME) / 7;
+    
+    // Determinação do conceito
+    if (MA >= 90) {
+        conceito = 1; // Conceito A
+    } else if (MA >= 75) {
+        conceito = 2; // Conceito B
+    } else if (MA >= 60) {
+        conceito = 3; // Conceito C
+    } else if (MA >= 40) {
+        conceito = 4; // Conceito D
+    } else {
+        conceito = 5; // Conceito E
+    }
+    
+    // Saída dos resultados
+    printf("Número do aluno: %d\n", id);
+    printf("Nota 1: %.2f\n", nota1);
+    printf("Nota 2: %.2f\n", nota2);
+    printf("Nota 3: %.2f\n", nota3);
+    printf("Média dos exercícios: %.2f\n", ME);
+    printf("Média de aproveitamento: %.2f\n", MA);
+    
+    // Determinação do status de aprovação ou reprovação
+    if (conceito == 1 || conceito == 2 || conceito == 3) {
+        printf("Conceito: ");
+        if (conceito == 1) printf("A - Aprovado\n");
+        else if (conceito == 2) printf("B - Aprovado\n");
+        else if (conceito == 3) printf("C - Aprovado\n");
+    } else {
+        printf("Conceito: ");
+        if (conceito == 4) printf("D - Reprovado\n");
+        else if (conceito == 5) printf("E - Reprovado\n");
+    }
+    
+   
+}
