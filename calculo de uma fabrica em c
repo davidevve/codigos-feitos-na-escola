@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    char nome[50];
+    float salario, novoSalario;
+    int anosTrabalhados;
+    
+    // Leitura dos dados
+    printf("Digite o nome do funcionário: ");
+    scanf("%49[^\n]", nome);  // Lê uma linha com até 49 caracteres
+    
+    printf("Digite o salário atual: ");
+    scanf("%f", &salario);
+    
+    printf("Digite quantos anos ele trabalha na empresa: ");
+    scanf("%d", &anosTrabalhados);
+    
+    // Cálculo do novo salário com base nos anos trabalhados
+    if (anosTrabalhados <= 3) {
+        novoSalario = salario * 1.03;
+    } else if (anosTrabalhados <= 10) {
+        novoSalario = salario * 1.125;
+    } else {
+        novoSalario = salario * 1.20;
+    }
+    
+    // Saída dos resultados
+    printf("Nome do funcionário: %s\n", nome);
+    printf("Salário atual: %.2f\n", salario);
+    printf("Anos de trabalho: %d\n", anosTrabalhados);
+    printf("Novo salário: %.2f\n", novoSalario);
+    
+    
+}
