@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "portuguese");
+    float sal;
+
+    printf("Qual é o seu salário: ");
+    scanf("%f", &sal);
+
+    if (sal > 3743.19) {
+        printf("Você pagará %.2f, logo seu salário será %.2f\n", sal * 27.5 / 100, sal - sal * 27.5 / 100);
+    } else if (sal > 2995.70) {
+        printf("Você pagará %.2f, logo seu salário será %.2f\n", sal * 22.5 / 100, sal - sal * 22.5 / 100);
+    } else if (sal > 2246.75) {
+        printf("Você pagará %.2f, logo seu salário será %.2f\n", sal * 15 / 100, sal - sal * 15 / 100);
+    } else if (sal > 1499.15) {
+        printf("Você pagará %.2f, logo seu salário será %.2f\n", sal * 7.5 / 100, sal - sal * 7.5 / 100);
+    } else {
+        printf("Você não pagará imposto\n");
+    }
+
+   
+}
