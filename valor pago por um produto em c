@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+   
+    float produto;
+    int escolha;
+   
+    printf("Qual o preço do produto? ");
+    scanf("%f", &produto);
+   
+    printf("Escolha a forma de pagamento:\n");
+    printf("1 - À vista em dinheiro ou cheque\n");
+    printf("2 - À vista no cartão de crédito\n");
+    printf("3 - Em duas vezes\n");
+    printf("4 - Em três vezes\n");
+   
+    scanf("%i", &escolha);
+   
+    if (escolha == 1){
+    printf("Você pagará aproximadamente %.2f Reais.\n", produto * 0.90);
+}
+    else if (escolha == 2){
+    printf("Você pagará aproximadamente %.2f Reais.\n", produto * 0.85);
+    }
+   else if (escolha == 3) {
+   printf("Você pagará aproximadamente %f Reais.\n", produto);
+   }
+   else{
+   printf("Você pagará aproximadamente %.2f Reais.\n", produto * 1.10);
+}
+}
