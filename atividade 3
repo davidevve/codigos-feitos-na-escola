@@ -1,0 +1,25 @@
+/*Faça um algoritmo que leia os valores A, B, C e imprima na tela se a soma de A + B é
+menor que C.*/
+#include<Stdio.h>
+#include<locale.h>
+main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    float n1,n2,n3;
+    printf("Qual o valor de A:");
+    scanf("%f",&n1);
+    printf("Qual o valor de B:");
+    scanf("%f",&n2);
+    printf("Qual o valor de C:");
+    scanf("%f",&n3);
+    if (n1 + n2 < n3)
+    {
+    printf("A soma dos valores é menor que C");
+    }
+    else
+    {
+    printf("A soma dos valores não é menor que C");
+    }
+
+
+}
