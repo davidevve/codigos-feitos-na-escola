@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "pt_BR.UTF-8");
+
+    int n_id;
+    float n1, n2, n3, ma, me;
+
+    printf("Coloque o seu número de matrícula: ");
+    scanf("%d", &n_id);
+
+    printf("\nColoque a sua primeira nota: ");
+    scanf("%f", &n1);
+
+    printf("\nColoque a sua segunda nota: ");
+    scanf("%f", &n2);
+
+    printf("\nColoque a sua terceira nota: ");
+    scanf("%f", &n3);
+
+    printf("\nColoque a média dos exercícios: ");
+    scanf("%f", &me);
+
+    // Ajustando a fórmula para a média ponderada
+    ma = (n1 + n2 + n3 * 3) / 7;
+
+    if (ma >= 90) {
+        printf("Sua média = %.1f - conceito A\n", ma);
+    } else if (ma >= 75) {
+        printf("Sua média = %.1f - conceito B\n", ma);
+    } else if (ma >= 60) {
+        printf("Sua média = %.1f - conceito C\n", ma);
+    } else if (ma >= 40) {
+        printf("Sua média = %.1f - conceito D\n", ma);
+    } else {
+        printf("Sua média = %.1f - conceito E\n", ma);
+    }
+
+    return 0;
+}
