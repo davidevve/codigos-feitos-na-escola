@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    // Solicita ao usuário que insira um número
+    printf("Digite um número: ");
+    scanf("%d", &numero);
+
+    // Verifica se o número está no intervalo de 10 a 100
+    if (numero >= 10 && numero <= 100) {
+        printf("O número está no intervalo de 10 a 100.\n");
+
+        // Verifica se o número é divisível por 4
+        if (numero % 4 == 0) {
+            printf("O número é divisível por 4.\n");
+        } else {
+            printf("O número não é divisível por 4.\n");
+        }
+    } else {
+        printf("O número não está no intervalo de 10 a 100.\n");
+    }
+
+    return 0;
+}
