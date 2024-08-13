@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    // Solicita ao usuário que insira um número
+    printf("Digite um número: ");
+    scanf("%d", &numero);
+
+    // Verifica se o número é divisível por 3
+    int divisivelPor3 = (numero % 3 == 0);
+    // Verifica se o número é divisível por 5
+    int divisivelPor5 = (numero % 5 == 0);
+
+    // Determina e imprime o resultado baseado nas verificações
+    if (divisivelPor3 && divisivelPor5) {
+        printf("O número é divisível por 3 e por 5.\n");
+    } else if (divisivelPor3) {
+        printf("O número é divisível apenas por 3.\n");
+    } else if (divisivelPor5) {
+        printf("O número é divisível apenas por 5.\n");
+    } else {
+        printf("O número não é divisível nem por 3 nem por 5.\n");
+    }
+
+    return 0;
+}
