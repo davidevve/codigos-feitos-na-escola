@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<locale.h>
+
+ main(){
+	
+	setlocale(LC_ALL,"portuguese");
+	
+
+	float s,san,aum,temp;
+	
+	printf("tempo em anos de trabalho = ");
+	scanf("%f",&temp);
+	
+	printf("\ncoloque o seu salario atual = ");
+	scanf("%f",&s);
+	
+	if(temp>3){
+		aum=s*3/100;
+	}
+	else
+	if(temp<10){
+		aum=s*12.5/100;
+	}
+	else
+	{
+		aum=s*20/100;
+	}
+	san=s+aum;
+	printf("o slario o novo é %2.f",san);
+	
+	
+	}
