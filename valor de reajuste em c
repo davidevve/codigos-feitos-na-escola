@@ -1,0 +1,14 @@
+/*02) Receber um valor qualquer do teclado e imprimir esse valor com
+reajuste de 10*/
+#include <stdio.h>
+
+int main() {
+  
+    float v, vr;
+    printf("Digite um valor: ");
+    scanf("%f", &v);
+    vr = v * 1.10;
+    printf("Valor original: %.2f\n", v);
+    printf("Valor reajustado em 10%%: %.2f\n", vr); 
+    
+}
