@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "portuguese");
+    
+    float temp, sal, bon1, bon2, nsal;
+    
+    printf("Coloque o seu tempo de trabalho na empresa (em anos): ");
+    scanf("%f", &temp);
+    
+    printf("Coloque qual o seu salário atual: R$");
+    scanf("%f", &sal);
+    
+    printf("Coloque a porcentagem de bônus de uma pessoa com 5 anos (em %): ");
+    scanf("%f", &bon1);
+    
+    printf("Coloque a porcentagem de bônus de uma pessoa com 10 anos (em %): ");
+    scanf("%f", &bon2);
+    
+    // Convertendo porcentagens para frações
+    bon1 /= 100;
+    bon2 /= 100;
+    
+    if (temp >= 10) {
+        nsal = sal * (1 + bon2);
+    } else if (temp >= 5) {
+        nsal = sal * (1 + bon1);
+    } else {
+        nsal = sal;
+    }
+    
+    printf("O seu novo salário é: R$%.2f\n", nsal);
+    
+    return 0;
+}
