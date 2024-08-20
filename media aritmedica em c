@@ -1,0 +1,19 @@
+/*01)Fazer um programa que imprima a média aritmética dos números
+8,9 e 7. A média dos números 4, 5 e 6. A soma das duas médias. A
+media das medias*/
+#include <stdio.h>
+#include<locale>
+int main() {
+   setlocale(LC_ALL,"portuguese");
+    float m1, m2, sdm, mdm;
+    m1 = (8 + 9 + 7) / 3.0;
+    m2 = (4 + 5 + 6) / 3.0;
+    sdm = m1 + m2;
+    mdm = sdm / 2.0;
+    printf("Média dos números 8, 9 e 7: %.2f\n", m1);
+    printf("Média dos números 4, 5 e 6: %.2f\n", m2);
+    printf("Soma das duas médias: %.2f\n", sdm);
+    printf("Média das médias: %.2f\n", mdm);
+    
+   
+}
