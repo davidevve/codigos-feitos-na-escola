@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<locale.h>
+
+main(){
+	setlocale(LC_ALL,"portuguese");
+	float temp,sal,bon;
+	
+	printf("coloque o seu tempon de trabalho na empresa  =  ");
+	scanf("%f",&temp);
+	printf("\ncoloque qual o seu salario atual  =  ");
+	scanf("%f",&sal);
+	if(temp>=5){
+		bon= sal *20/100;
+	}
+else{
+	bon=sal*10/100;
+}
+
+printf("\n\no seu bonus de salario é %.2f",bon);
+
+
+
+}
+
+
