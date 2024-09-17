@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<locale.h>
+int main() {
+    int codigo;
+setlocale(LC_ALL,"portuguese");
+    printf("Digite o código do produto: ");
+    scanf("%d", &codigo);
+
+    switch (codigo) {
+        case 1:
+            printf("Alimento não perecível\n");
+            break;
+        case 2:
+            printf("Alimento perecível\n");
+            break;
+        case 3:
+            printf("Vestuário\n");
+            break;
+        case 4:
+            printf("Limpeza\n");
+            break;
+        default:
+            printf("Código inválido. Por favor, tente novamente.\n");
+            break;
+    }
+
+    return 0;
+}
