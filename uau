@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "portuguese");
+    int tipc;
+    float p, d, novval;
+
+    printf("Coloque a sua categoria do cliente\n");
+    printf("(1) cliente comun\n");
+    printf("(2) funcionario\n");
+    printf("(3) cliente vip\n");
+    scanf("%d", &tipc);
+
+    printf("Coloque o valor do produto: ");
+    scanf("%f", &p);
+
+    switch (tipc) {
+        case 1:
+            novval = p; // no discount for common customers
+            printf("A compra deu um valor de: R$%.2f\n", novval);
+            break;
+        case 2:
+            d = p * 10 / 100;
+            novval = p - d;
+            printf("A compra deu um valor de: R$%.2f\n", novval);
+            break;
+        case 3:
+            d = p * 5 / 100;
+            novval = p - d;
+            printf("A compra deu um valor de: R$%.2f\n", novval);
+            break;
+        default:
+            printf("Categoria inválida. Por favor, tente novamente.\n");
+            break;
+    }
+
+    return 0;
+}
