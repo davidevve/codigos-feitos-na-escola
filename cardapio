@@ -1,0 +1,50 @@
+/*o cardapio de uma lanchonete é o seguinte :
+100 cachorro quente 1,10
+101 bauru simples 1,30
+102 bauru c/ovo 1,50
+103 hamburguer 1,10
+104 cheeseburguer 1,30
+105 refrigerante 1,00
+escreva um programa que leia o codigo do produto a quantidade e calcule o valor a ser pagp por aquele lanche considere que a cada execução somente será calculado um item*/
+
+#include <stdio.h>
+#include<locale.h>
+int main() {
+    int codigo, quantidade;
+    float preco, total;
+setlocale(LC_ALL,"portuguese");
+    printf("Digite o código do produto: ");
+    scanf("%d", &codigo);
+
+    printf("Digite a quantidade: ");
+    scanf("%d", &quantidade);
+
+    switch (codigo) {
+        case 100:
+            preco = 1.10;
+            break;
+        case 101:
+            preco = 1.30;
+            break;
+        case 102:
+            preco = 1.50;
+            break;
+        case 103:
+            preco = 1.10;
+            break;
+        case 104:
+            preco = 1.30;
+            break;
+        case 105:
+            preco = 1.00;
+            break;
+        default:
+            printf("Código inválido. Por favor, tente novamente.\n");
+            return 1;
+    }
+
+    total = preco * quantidade;
+    printf("O valor a ser pago é: R$%.2f\n", total);
+
+    return 0;
+}
